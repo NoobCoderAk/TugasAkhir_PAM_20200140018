@@ -16,17 +16,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.project.aplikasistokbarang.EditBarang;
 import com.project.aplikasistokbarang.MainActivity;
 import com.project.aplikasistokbarang.R;
+import com.project.aplikasistokbarang.ViewDaftarBarang;
 import com.project.aplikasistokbarang.database.DBController;
 import com.project.aplikasistokbarang.database.Barang;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-/*
 public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.BarangViewHolder>{
-   private ArrayList<Barang> listData;
+    private ArrayList<Barang> listData;
     private Context control;
 
-    @NonNull
+    public BarangAdapter(ArrayList<Barang> listData) {
+        this.listData = listData;
+    }
+
     @Override
     public BarangAdapter.BarangViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInf = LayoutInflater.from(parent.getContext());
@@ -37,20 +40,19 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.BarangView
 
     @Override
     public void onBindViewHolder(@NonNull BarangAdapter.BarangViewHolder holder, int position) {
-        String nma, id;
-        Integer stok, harga;
+        String namaBarang, id, stokBarang, hargaBarang;
 
         id = listData.get(position).getId();
-        nma = listData.get(position).getNamaBarang();
-        stok = listData.get(position).getStokBarang();
-        harga = listData.get(position).getHargaBarang();
+        namaBarang = listData.get(position).getNamaBarang();
+        stokBarang = listData.get(position).getStokBarang();
+        hargaBarang = listData.get(position).getHargaBarang();
         DBController db = new DBController(control);
 
         holder.namaBarangTxt.setTextColor(Color.BLUE);
         holder.namaBarangTxt.setTextSize(20);
-        holder.namaBarangTxt.setText(nma);
-        holder.stokBarangTxt.setText(stok);
-        holder.hargaBarangTxt.setText(harga);
+        holder.namaBarangTxt.setText(namaBarang);
+        holder.stokBarangTxt.setText(stokBarang );
+        holder.hargaBarangTxt.setText(hargaBarang);
 
         holder.cardku.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -64,15 +66,16 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.BarangView
                             case R.id.mnEdit:
                                 Intent i = new Intent(control, EditBarang.class);
                                 i.putExtra("id",id);
-                                i.putExtra("nama",nma);
-                                i.putExtra("telpon",tlp);
+                                i.putExtra("namaBarang",namaBarang);
+                                i.putExtra("stokBarang",stokBarang);
+                                i.putExtra("hargaBarang",hargaBarang);
                                 control.startActivity(i);
                                 break;
                             case R.id.mnHapus:
                                 HashMap<String,String> values = new HashMap<>();
                                 values.put("id",id);
                                 db.DeleteData(values);
-                                Intent j = new Intent(control, MainActivity.class);
+                                Intent j = new Intent(control, ViewDaftarBarang.class);
                                 control.startActivity(j);
                                 break;
                         }
@@ -87,7 +90,7 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.BarangView
 
     @Override
     public int getItemCount() {
-        return 0;
+        return (listData != null)?listData.size():0;
     }
 
     public class BarangViewHolder extends RecyclerView.ViewHolder{
@@ -96,10 +99,10 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.BarangView
         public BarangViewHolder(View view) {
             super(view);
             cardku = (CardView) view.findViewById(R.id.kartuku);
-            namaBarangTxt = (TextView)  view.findViewById(R.id.textNama);
-            stokBarangTxt = (TextView) view.findViewById(R.id.textTelpon);
-            hargaBarangTxt = (TextView) view.findViewById(R.id.textTelpon);
+                namaBarangTxt = (TextView)  view.findViewById(R.id.textNama);
+                stokBarangTxt = (TextView) view.findViewById(R.id.textStok);
+                hargaBarangTxt = (TextView) view.findViewById(R.id.textHarga);
 
         }
     }
-}*/
+}

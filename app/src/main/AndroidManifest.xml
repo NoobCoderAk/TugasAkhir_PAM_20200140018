@@ -11,16 +11,15 @@
         android:theme="@style/Theme.AplikasiStokBarang">
         <activity
             android:name=".EditBarang"
-            android:exported="false" />
+            android:parentActivityName=".ViewDaftarBarang"/>
         <activity
             android:name=".TambahData"
-            android:exported="false" />
+            android:parentActivityName=".Home_Activity"/>
         <activity
             android:name=".ViewDaftarBarang"
-            android:exported="false" />
+            android:parentActivityName=".Home_Activity"/>
         <activity
-            android:name=".Home_Activity"
-            android:exported="false" />
+            android:name=".Home_Activity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

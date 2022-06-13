@@ -15,17 +15,20 @@ public class DBController extends SQLiteOpenHelper{
 
     public DBController(Context context){super(context,"Toko",null,1);}
 
+    //membuat tabel
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table barang (id integer primary key, namaBarang text, stokBarang integer, hargaBarang integer)");
+        db.execSQL("create table barang (id integer primary key, namaBarang text, stokBarang text, hargaBarang text)");
     }
 
+    //mengupgrade tabel
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists barang");
         onCreate(db);
     }
 
+    //method untuk memasukkan data ke tabel
     public void insertData(HashMap<String,String> queryValues){
         SQLiteDatabase basisdata = this.getWritableDatabase();
         ContentValues nilai = new ContentValues();
@@ -39,6 +42,7 @@ public class DBController extends SQLiteOpenHelper{
         basisdata.close();
     }
 
+    //method untuk mengupdate data yang telqh di edit
     public void UpdateData(HashMap<String,String> queryValues ){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues nilai = new ContentValues();
@@ -51,13 +55,15 @@ public class DBController extends SQLiteOpenHelper{
         db.close();
     }
 
+    //untuk delete data
     public void DeleteData(HashMap<String,String> queryValues){
         SQLiteDatabase db = getWritableDatabase();
         db.delete("barang", "id=?", new String[]{queryValues.get("id")});
         db.close();
     }
 
-    public ArrayList<HashMap<String,String>> getAllTeman() {
+    //untuk mengambil data pada tabel
+    public ArrayList<HashMap<String,String>> getAllBarang() {
 
         ArrayList<HashMap<String,String>> daftarBarang;
         daftarBarang = new ArrayList<HashMap<String,String>>();

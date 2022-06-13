@@ -1,19 +1,18 @@
 package com.project.aplikasistokbarang.database;
 
 public class Barang {
-    String id, namaBarang;
-    Integer stokBarang, hargaBarang;
+    String id, namaBarang, stokBarang, hargaBarang;
 
     public Barang() {
     }
-
-    public Barang(String id, String namaBarang, Integer stokBarang, Integer hargaBarang) {
+/*
+    public Barang(String id, String namaBarang, String stokBarang, String hargaBarang) {
         this.id = id;
         this.namaBarang = namaBarang;
         this.stokBarang = stokBarang;
         this.hargaBarang = hargaBarang;
 
-    }
+    }*/
 
     public String getId() {
         return id;
@@ -31,20 +30,19 @@ public class Barang {
         this.namaBarang = namaBarang;
     }
 
-    public Integer getStokBarang() {
+    public String getStokBarang() {
         return stokBarang;
     }
 
-    public void setStokBarang(Integer stokBarang) {
+    public void setStokBarang(String stokBarang) {
         this.stokBarang = stokBarang;
     }
 
-    public Integer getHargaBarang() {
+    public String getHargaBarang() {
         return hargaBarang;
     }
 
-    public void setHargaBarang(Integer hargaBarang) {
+    public void setHargaBarang(String hargaBarang) {
         this.hargaBarang = hargaBarang;
     }
-
 }

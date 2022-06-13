@@ -17,8 +17,7 @@ import java.util.HashMap;
 public class EditBarang extends Activity {
     TextInputEditText namaBarang, stokBarang, hargaBarang;
     Button Save;
-    String nmBarang, id;
-    Integer stkBarang, hrgBarang;
+    String nmBarang, id, stkBarang, hrgBarang;
     DBController controller = new DBController(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +30,8 @@ public class EditBarang extends Activity {
 
         id = getIntent().getStringExtra("id");
         nmBarang = getIntent().getStringExtra("namaBarang");
-        stkBarang = Integer.valueOf(getIntent().getStringExtra("stokBarang"));
-        hrgBarang = Integer.valueOf(getIntent().getStringExtra("hargaBarang"));
+        stkBarang = getIntent().getStringExtra("stokBarang");
+        hrgBarang = getIntent().getStringExtra("hargaBarang");
 
         setTitle("Edit Barang");
         namaBarang.setText(nmBarang);
@@ -47,13 +46,13 @@ public class EditBarang extends Activity {
                 }
                 else{
                     nmBarang = namaBarang.getText().toString();
-                    stkBarang = Integer.valueOf(stokBarang.getText().toString());
-                    hrgBarang = Integer.valueOf(hargaBarang.getText().toString());
+                    stkBarang = stokBarang.getText().toString();
+                    hrgBarang = hargaBarang.getText().toString();
                     HashMap<String,String> values = new HashMap<>();
                     values.put("id",id);
                     values.put("namaBarang",nmBarang);
-                    values.put("stokBarang", String.valueOf(stkBarang));
-                    values.put("hargaBarang", String.valueOf(hrgBarang));
+                    values.put("stokBarang", stkBarang);
+                    values.put("hargaBarang", hrgBarang);
                     controller.UpdateData(values);
                     callHome();
                 }
