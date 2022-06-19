@@ -10,15 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplikasiStokBarang">
         <activity
+            android:label="@string/app_name_edit"
             android:name=".EditBarang"
             android:parentActivityName=".ViewDaftarBarang"/>
         <activity
             android:name=".TambahData"
+            android:label="@string/app_name_tambah"
             android:parentActivityName=".Home_Activity"/>
         <activity
             android:name=".ViewDaftarBarang"
             android:parentActivityName=".Home_Activity"/>
         <activity
+            android:label="@string/app_name_main"
             android:name=".Home_Activity" />
         <activity
             android:name=".MainActivity"

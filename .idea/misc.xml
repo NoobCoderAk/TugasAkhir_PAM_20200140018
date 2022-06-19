@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DATA SOURCE CODE/PAM (Moblie App)/Tugas Akhir PAM/app/src/main/res/drawable/edit_background.xml" value="0.2555" />
         <entry key="..\:/DATA SOURCE CODE/PAM (Moblie App)/Tugas Akhir PAM/app/src/main/res/layout/activity_create_data.xml" value="0.264" />
-        <entry key="..\:/DATA SOURCE CODE/PAM (Moblie App)/Tugas Akhir PAM/app/src/main/res/layout/activity_edit_barang.xml" value="0.2" />
+        <entry key="..\:/DATA SOURCE CODE/PAM (Moblie App)/Tugas Akhir PAM/app/src/main/res/layout/activity_edit_barang.xml" value="0.264" />
         <entry key="..\:/DATA SOURCE CODE/PAM (Moblie App)/Tugas Akhir PAM/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/DATA SOURCE CODE/PAM (Moblie App)/Tugas Akhir PAM/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/DATA SOURCE CODE/PAM (Moblie App)/Tugas Akhir PAM/app/src/main/res/layout/activity_tambah_data.xml" value="0.176" />
+        <entry key="..\:/DATA SOURCE CODE/PAM (Moblie App)/Tugas Akhir PAM/app/src/main/res/layout/activity_tambah_data.xml" value="0.264" />
         <entry key="..\:/DATA SOURCE CODE/PAM (Moblie App)/Tugas Akhir PAM/app/src/main/res/layout/activity_view_daftar_barang.xml" value="0.12132725430597771" />
+        <entry key="..\:/DATA SOURCE CODE/PAM (Moblie App)/Tugas Akhir PAM/app/src/main/res/layout/popup.xml" value="0.25" />
         <entry key="..\:/DATA SOURCE CODE/PAM (Moblie App)/Tugas Akhir PAM/app/src/main/res/layout/row_data_barang.xml" value="0.1" />
         <entry key="..\:/DATA SOURCE CODE/PAM (Moblie App)/Tugas Akhir PAM/app/src/main/res/menu/menu.xml" value="0.16666666666666666" />
       </map>

@@ -2,6 +2,7 @@ package com.project.aplikasistokbarang;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.widget.Button;
 import android.content.Intent;
@@ -29,6 +30,7 @@ public class TambahData extends AppCompatActivity {
         tStokBarang=(TextInputEditText) findViewById(R.id.tietStok);
         tHargaBarang=(TextInputEditText) findViewById(R.id.tietHarga);
         simpanBtn=(Button) findViewById(R.id.buttonSave);
+
 
         simpanBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#AEDBCE"
     tools:context=".TambahData">
 
     <TextView
@@ -11,8 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Isi Data Barang"
-        android:textSize="25dp"
+        android:text="@string/isi_data_barang"
+        android:background="@color/scnd_color"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="5dp"
+        android:textColor="#455A64"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -30,6 +35,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tietNama"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/cardview_light_background"
@@ -46,6 +53,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tietStok"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/cardview_light_background"
@@ -62,6 +71,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tietHarga"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/cardview_light_background"
@@ -74,6 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="188dp"
         android:text="@string/button_save"
+        android:textColor="#455A64"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout2"

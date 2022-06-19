@@ -1,13 +1,18 @@
 <resources>
     <string name="app_name">Aplikasi Stok Barang</string>
+    <string name="app_name_edit">Edit Barang</string>
+    <string name="app_name_tambah">Tambah Barang</string>
+    <string name="app_name_main">Main Menu</string>
+
+
     <string name="login_label">Login</string>
     <string name="name_label">Username</string>
     <string name="password_label">Password</string>
     <string name="button_login">Login</string>
 
+    <string name="tmenu">MENU</string>
     <string name="addData_label">Tambah Barang</string>
     <string name="viewData_label">Lihat Data Barang</string>
-    <string name="clearAll_label">Hapus Semua Data</string>
 
     <string name="namaBarang_label">Nama Barang</string>
     <string name="HargaBarang_label">Harga Barang</string>
@@ -16,5 +21,7 @@
 
     <string name="tdeletebarang">Delete Barang</string>
     <string name="teditbarang">Edit Barang</string>
+    <string name="isi_data_barang">Isi Data Barang</string>
+    <string name="data_behasil_disimpan">Data behasil disimpan</string>
 
 </resources>
