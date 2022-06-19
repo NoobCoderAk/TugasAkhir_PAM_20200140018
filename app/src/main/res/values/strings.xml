@@ -23,5 +23,8 @@
     <string name="teditbarang">Edit Barang</string>
     <string name="isi_data_barang">Isi Data Barang</string>
     <string name="data_behasil_disimpan">Data behasil disimpan</string>
+    <string name="harga">Harga</string>
+    <string name="qty_pcs">Qty/pcs</string>
+    <string name="nama_hd">Nama</string>
 
 </resources>

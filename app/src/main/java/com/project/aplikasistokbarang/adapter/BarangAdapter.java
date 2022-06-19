@@ -48,8 +48,6 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.BarangView
         hargaBarang = listData.get(position).getHargaBarang();
         DBController db = new DBController(control);
 
-        holder.namaBarangTxt.setTextColor(Color.BLUE);
-        holder.namaBarangTxt.setTextSize(20);
         holder.namaBarangTxt.setText(namaBarang);
         holder.stokBarangTxt.setText(stokBarang );
         holder.hargaBarangTxt.setText(hargaBarang);

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.content.Intent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -30,6 +31,7 @@ public class TambahData extends AppCompatActivity {
         tStokBarang=(TextInputEditText) findViewById(R.id.tietStok);
         tHargaBarang=(TextInputEditText) findViewById(R.id.tietHarga);
         simpanBtn=(Button) findViewById(R.id.buttonSave);
+
 
 
         simpanBtn.setOnClickListener(new View.OnClickListener() {

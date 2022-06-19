@@ -6,32 +6,46 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:id="@+id/kartuku"
-    card_view:cardElevation="3dp"
-    card_view:cardCornerRadius="5dp"
     card_view:cardUseCompatPadding="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:gravity="center">
+
         <TextView
             android:id="@+id/textNama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="TextView"/>
+            android:layout_width="131dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="4dp"
+            android:paddingLeft="6dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/bordertb"
+            android:text="TextView"
+            android:textColor="#455A64" />
+
         <TextView
             android:id="@+id/textStok"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="TextView" />
+            android:layout_width="131dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="4dp"
+            android:paddingLeft="6dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/bordertb"
+            android:text="TextView"
+            android:textColor="#455A64"/>
+
         <TextView
             android:id="@+id/textHarga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="TextView" />
+            android:layout_width="131dp"
+            android:layout_height="30dp"
+            android:paddingLeft="6dp"
+            android:paddingVertical="4dp"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/bordertb"
+            android:text="TextView"
+            android:textColor="#455A64"/>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

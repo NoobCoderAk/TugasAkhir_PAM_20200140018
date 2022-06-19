@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.project.aplikasistokbarang.adapter.BarangAdapter;
@@ -23,7 +24,7 @@ public class ViewDaftarBarang extends AppCompatActivity {
     private ArrayList<Barang> barangArrayList;
     DBController controller = new DBController(this);
     String id, nmaBarang, stkBarang, hrgaBarang;
-    private FloatingActionButton fab;
+    private ImageView btnAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +32,14 @@ public class ViewDaftarBarang extends AppCompatActivity {
         setContentView(R.layout.activity_view_daftar_barang);
 
         recyclerView = findViewById(R.id.recyclerView);
-        fab = findViewById(R.id.floatingBtn);
+        btnAdd = findViewById(R.id.iv_addBarang);
         BacaData();
         adapter = new BarangAdapter(barangArrayList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ViewDaftarBarang.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
-        fab.setOnClickListener(new View.OnClickListener() {
+        btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ViewDaftarBarang.this, TambahData.class);
